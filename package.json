@@ -23,5 +23,8 @@
     "pug": "^3.0.2",
     "sqlite3": "^5.0.2",
     "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "start": "nodemon src/app.ts --config ./config.json"
   }
 }
