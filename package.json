@@ -1,8 +1,8 @@
 {
   "name": "sample-project",
   "version": "1.0.0",
-  "description": "sample for database projectt prep",
-  "main": "index.ts",
+  "description": "sample for database project prep",
+  "main": "app.ts",
   "repository": "https://github.com/Thien-An-Ngo/sample-project.git",
   "author": "tianen <tha.ngo@icloud.com>",
   "license": "MIT",
