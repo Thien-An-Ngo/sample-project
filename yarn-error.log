@@ -1,0 +1,45 @@
+Arguments: 
+  /Users/thienan/.nvm/versions/node/v12.19.0/bin/node /Users/thienan/.nvm/versions/node/v12.19.0/bin/yarn add -D typescript @types/express @types/dotenv @types/node @types/sqlite nodemon ts-node @types/pug
+
+PATH: 
+  /Users/thienan/Library/Python/3.9/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/Users/thienan/.nvm/versions/node/v12.19.0/bin:/Users/thienan/.npm-packages/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/thienan/homebrew/bin:/Users/thienan/.go/bin:/usr/local/opt/go/libexec/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  12.19.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@types%2fsqlite: Not found
+      at Request.params.callback [as _callback] (/Users/thienan/.nvm/versions/node/v12.19.0/lib/node_modules/yarn/lib/cli.js:67029:18)
+      at Request.self.callback (/Users/thienan/.nvm/versions/node/v12.19.0/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (events.js:314:20)
+      at Request.<anonymous> (/Users/thienan/.nvm/versions/node/v12.19.0/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (events.js:314:20)
+      at IncomingMessage.<anonymous> (/Users/thienan/.nvm/versions/node/v12.19.0/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1223:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "sample-project",
+    "version": "1.0.0",
+    "description": "sample for database projectt prep",
+    "main": "index.ts",
+    "repository": "https://github.com/Thien-An-Ngo/sample-project.git",
+    "author": "tianen <tha.ngo@icloud.com>",
+    "license": "MIT",
+    "private": false
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,27 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "description": "sample for database projectt prep",
+  "main": "index.ts",
+  "repository": "https://github.com/Thien-An-Ngo/sample-project.git",
+  "author": "tianen <tha.ngo@icloud.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.21",
+    "@types/pug": "^2.0.6",
+    "@types/sqlite3": "^3.1.8",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "pug": "^3.0.2",
+    "sqlite3": "^5.0.2",
+    "uuid": "^8.3.2"
+  }
+}
