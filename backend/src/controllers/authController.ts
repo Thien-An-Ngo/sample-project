@@ -2,10 +2,9 @@ import UserRepo from "../repositories/userRepository"
 import User from "../models/user"
 
 export const getUser = async (req, res) => {
-	const user = await UserRepo.getUserByUsername(`${req.query.username}`)
-	res.status(200)
-	return res.json({user: user})
-}
+  const user = await UserRepo.getUserByUsername(`${req.query.username}`);
+  return res.status(200).json({ user });
+};
 
 export const newUser = async (req, res) => {
 	console.log("hurz1")
@@ -24,7 +23,6 @@ export const newUser = async (req, res) => {
 	res.status(200)
 	return res.json({msg: 'success'})
 }
-
 
 // auxiliary functions
 const isDataIncomplete = (res, keys: string[], obj: object): boolean => {
