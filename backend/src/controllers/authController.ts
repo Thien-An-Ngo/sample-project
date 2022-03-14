@@ -1,6 +1,7 @@
 import UserRepo from "../repositories/userRepository"
-import User from '../models/user'
 
-export const getUser = (req, res) => {
-	UserRepo.getUserByUsername()
+export const getUser = async (req, res) => {
+	const user = await UserRepo.getUserByUsername(<string>req.query.username)
+	res.status(200)
+	return res.json({user: user})
 }

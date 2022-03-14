@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 })
 
 // routes
-app.use("/api/user", userRoutes)
+app.use("/api/", userRoutes)
 
 //default for all routes
 app.use((req, res) => {
