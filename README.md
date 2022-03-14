@@ -3,8 +3,6 @@ A sample to start things of with the database project
 
 ##Technologies
 - express as the main framework
-- pug for the template rendering
-  - example for both: [here](https://auth0.com/blog/create-a-simple-and-stylish-node-express-app/)
 - sqlite3 as database during development
 - typescript for typing and comfort
 - uuid for secure ids
