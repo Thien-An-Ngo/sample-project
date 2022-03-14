@@ -9,29 +9,26 @@ import userRoutes from "./routes/userRoutes"
 
 const app = express()
 
+app.use(cors())
+app.use(express.json())
+
 app.listen(process.env.EXPRESS_APP_PORT, async () => {
-	// dbService.restartDB()
-	dbService.startDB()
+	dbService.restartDB()
+	// dbService.startDB()
 	console.log(`Backend listening on port http://localhost:${process.env.EXPRESS_APP_PORT}`)
 })
 
 app.disable("x-powered-by")
 
 // index
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
 	res.json({"msg": "success"})
 })
 
 // routes
-app.use("/api/", userRoutes)
+app.use("/api/user", userRoutes)
 
 //default for all routes
 app.use((req, res) => {
 	res.status(404);
 });
-
-app.use(cors())
-app.use((req, res, next) => {
-
-	next()
-})

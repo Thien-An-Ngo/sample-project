@@ -12,11 +12,13 @@ export default class {
 		return <User[]>users
 	}
 
+	/** @param id string that is used to find the user */
 	static async getUserById(id: string): Promise<User> {
 		const user = await dbService.get("SELECT * FROM User WHERE id = $id", {$id: id})
 		return <User>user
 	}
 
+	/** @param username string that is used to find the user */
 	static async getUserByUsername(username: string): Promise<User> {
 		const user = await dbService.get("SELECT * FROM User WHERE username = $username", {
 			$username: username

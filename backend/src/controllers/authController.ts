@@ -1,5 +1,5 @@
 import UserRepo from "../repositories/userRepository"
-import User from "../models/user";
+import User from "../models/user"
 
 export const getUser = async (req, res) => {
 	const user = await UserRepo.getUserByUsername(`${req.query.username}`)
@@ -8,10 +8,13 @@ export const getUser = async (req, res) => {
 }
 
 export const newUser = async (req, res) => {
-	if (isDataIncomplete(res, ['username', 'name', 'surname', 'password'], req.query)) {
+	console.log("hurz1")
+	console.log(req.body)
+	if (isDataIncomplete(res, ['username', 'name', 'surname', 'password'], req.body)) {
 		return
 	}
-	const {username, name, surname, password} = req.query
+	const {username, name, surname, password} = req.body
+	console.log("hurz")
 	if (await UserRepo.exists('username', username)) {
 		res.status(400)
 		return res.json({error: "Account already exists."})

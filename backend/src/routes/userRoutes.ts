@@ -3,7 +3,7 @@ import {getUser, newUser} from "../controllers/authController"
 
 const router = express.Router()
 
-router.get("/getUser", getUser)
-router.post("/newUser", newUser)
+router.get("/get", getUser)
+router.post("/new", newUser)
 
 export default router
