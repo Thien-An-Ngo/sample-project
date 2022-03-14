@@ -1,47 +1,49 @@
-import UserRepo from "../repositories/userRepository"
-import User from "../models/user";
+import UserRepo from '../repositories/userRepository';
+import User from '../models/user';
 
 export const getUser = async (req, res) => {
-	const user = await UserRepo.getUserByUsername(`${req.query.username}`)
-	res.status(200)
-	return res.json({user: user})
-}
+  const user = await UserRepo.getUserByUsername(`${req.query.username}`);
+  return res.status(200).json({ user });
+};
 
 export const newUser = async (req, res) => {
-	if (isDataIncomplete(res, ['username', 'name', 'surname', 'password'], req.query)) {
-		return
-	}
-	const {username, name, surname, password} = req.query
-	if (await UserRepo.exists('username', username)) {
-		res.status(400)
-		return res.json({error: "Account already exists."})
-	}
-	const newUser = new User(username, name, surname, password)
-	await UserRepo.add(newUser)
-	res.status(200)
-	return res.json({msg: 'success'})
-}
-
+  if (
+    isDataIncomplete(res, ['username', 'name', 'surname', 'password'], req.body)
+  ) {
+    return;
+  }
+  const { username, name, surname, password } = req.body;
+  if (await UserRepo.exists('username', username)) {
+    res.status(400);
+    return res.json({ error: 'Account already exists.' });
+  }
+  const newUser = new User(username, name, surname, password);
+  await UserRepo.add(newUser);
+  res.status(200);
+  return res.json({ msg: 'success' });
+};
 
 // auxiliary functions
 const isDataIncomplete = (res, keys: string[], obj: object): boolean => {
-	const data = {}
-	let isData = true
-	keys.forEach(key => {
-		if (!isValue(obj[key])) {
-			isData = false
-		}
-		data[key] = isValue(obj[key])
-	})
-	if (!isData) {
-		data['error'] = "data incomplete"
-		res.status(400)
-		res.json(data)
-		return true
-	}
-	return false
-}
+  const data = {};
+  let isData = true;
+
+  console.log(obj);
+  keys.forEach(key => {
+    if (!isValue(obj[key])) {
+      isData = false;
+    }
+    data[key] = isValue(obj[key]);
+  });
+  if (!isData) {
+    data['error'] = 'data incomplete';
+    res.status(400);
+    res.json(data);
+    return true;
+  }
+  return false;
+};
 
 const isValue = (val: any): boolean => {
-	return !(val === undefined || val === null || val.length <= 0);
-}
+  return !(val === undefined || val === null || val.length <= 0);
+};
