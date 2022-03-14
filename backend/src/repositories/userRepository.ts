@@ -24,7 +24,7 @@ export default class {
 		return <User>user
 	}
 
-	static async new(user: User): Promise<boolean> {
+	static async add(user: User): Promise<boolean> {
 		await bcrypt.hash(user.password, saltRounds, async function (err, hash) {
 			if (err) {
 				return false;
@@ -37,7 +37,7 @@ export default class {
 					$name: user.name,
 					$surname: user.surname,
 					$password: hash
-				});
+				})
 				return true;
 			} catch (ex) {
 				console.error(ex)

@@ -8,7 +8,7 @@ export default class {
 	surname!: string
 
 	constructor(username: string, password: string, name: string, surname: string, id?: string) {
-		this.id = id || uuid();
+		this.id = id || uuid()
 		this.username = username
 		this.password = password
 		this.name = name
