@@ -27,6 +27,7 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "start": "nodemon src/app.ts --config ./config.json"
+    "start": "nodemon src/app.ts --config ./config.json",
+    "build": "tsc --project ./"
   }
 }
