@@ -1,7 +1,7 @@
 # Sample-Project
 A sample to start things of with the database project
 
-##Technologies
+## Technologies
 - express as the main framework
 - sqlite3 as database during development
 - typescript for typing and comfort
@@ -10,7 +10,7 @@ A sample to start things of with the database project
 
 ### optional:
 - yarn package manager
-
+- vue.js as frontend framework (`frontend`-folder; but other frontend frameworks or SSR templating engines might be easier to use) 
 
 
 ## How to use
