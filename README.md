@@ -22,6 +22,11 @@ A sample to start things of with the database project
 - `npm install` or `yarn install`
 - To start server:
   - `npm run start` or `yarn start`
+- To start frontend: 
+  1. `cd` into `frontend`
+  2. Serve or run 
+    - `npm run serve` for hot reload or
+    - `npm run start`
 - To deploy:
   - `npm run build` or `yarn build`
 
