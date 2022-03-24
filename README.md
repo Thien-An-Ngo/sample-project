@@ -26,9 +26,12 @@ A sample to start things of with the database project
   1. `cd` into `frontend`
   2. Serve or run 
     - `npm run serve` for hot reload or
-    - `npm run start`
 - To deploy:
-  - `npm run build` or `yarn build`
+  - frontend: 
+    1. `cd frontend/`
+    2. Verify options in `vue.config.js`
+    3. `npm run build`
+  - server: `npm run build` or `yarn build`
 
 ### Through terminal:
 - install github cli tools if you don't already have them
