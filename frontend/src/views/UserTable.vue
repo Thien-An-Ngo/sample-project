@@ -54,7 +54,7 @@ export default defineComponent({
   methods: {
     async postRequest() {
       console.log(this.textinput)
-      this.user = await axios.post('/api/user/newuser/', {
+      this.user = await axios.post('/api/user/new/', {
         username: this.textinput,
         name: 'TestName',
         surname: 'TestSurName',
@@ -63,7 +63,7 @@ export default defineComponent({
     },
     async getRequest() {
       this.user = (
-        await axios.get(`/api/user/getuser?username=${this.textinput}`)
+        await axios.get(`/api/user/get?username=${this.textinput}`)
       ).data.user
       this.showTable = true
     },

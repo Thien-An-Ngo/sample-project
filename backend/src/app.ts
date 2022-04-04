@@ -5,14 +5,14 @@ import dotenv from 'dotenv';
 dotenv.config({ path: path.join(__dirname, '../', '.env') });
 
 import dbService from './services/databaseService';
-import userRoutes from './routes/userRoutes';
+import userRoutes from './routes/userRoutes'
 
 const app = express();
 
 app.use(cors())
 app.use(express.json())
 
-app.listen(process.env.EXPRESS_APP_PORT, async () => {
+app.listen(5000, async () => {
 	dbService.restartDB()
 	// dbService.startDB()
 	console.log(`Backend listening on port http://localhost:${process.env.EXPRESS_APP_PORT}`)
