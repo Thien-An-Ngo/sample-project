@@ -1,7 +1,7 @@
 # Sample-Project
 A sample to start things of with the database project
 
-##Technologies
+## Technologies
 - express as the main framework
 - sqlite3 as database during development
 - typescript for typing and comfort
@@ -10,7 +10,7 @@ A sample to start things of with the database project
 
 ### optional:
 - yarn package manager
-
+- vue.js as frontend framework (`frontend`-folder; but other frontend frameworks or SSR templating engines might be easier to use) 
 
 
 ## How to use
@@ -22,8 +22,16 @@ A sample to start things of with the database project
 - `npm install` or `yarn install`
 - To start server:
   - `npm run start` or `yarn start`
+- To start frontend: 
+  1. `cd` into `frontend`
+  2. Serve or run 
+    - `npm run serve` for hot reload or
 - To deploy:
-  - `npm run build` or `yarn build`
+  - frontend: 
+    1. `cd frontend/`
+    2. Verify options in `vue.config.js`
+    3. `npm run build`
+  - server: `npm run build` or `yarn build`
 
 ### Through terminal:
 - install github cli tools if you don't already have them
