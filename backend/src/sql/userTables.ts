@@ -5,8 +5,7 @@ export const CREATE_TABLES = [
         name VARCHAR(64) NOT NULL,
         surname VARCHAR(64) NOT NULL,
         password VARCHAR(64) NOT NULL
-	 )`,
-	`CREATE INDEX IF NOT EXISTS idx_user_username ON User(username)`
+	 )`
 ]
 
 export const TABLE_NAMES = ['User']

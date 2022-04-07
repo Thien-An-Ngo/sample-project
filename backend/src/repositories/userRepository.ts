@@ -33,7 +33,7 @@ export default class {
 				return false;
 			}
 			const stmt =
-				'INSERT INTO User(id,username,name,surname,password) VALUES($id,$username,$name,$surname,$password)';
+				'INSERT INTO User(id,username,name,surname,password) VALUES($id,$username,$name,$surname,$password)'
 			try {
 				await dbService.run(stmt, {
 					$id: user.id,

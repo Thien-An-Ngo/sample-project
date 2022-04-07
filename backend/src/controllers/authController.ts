@@ -7,7 +7,6 @@ export const getUser = async (req, res) => {
 };
 
 export const newUser = async (req, res) => {
-	console.log("hurz1")
 	console.log(req.body)
 	if (isDataIncomplete(res, ['username', 'name', 'surname', 'password'], req.body)) {
 		return

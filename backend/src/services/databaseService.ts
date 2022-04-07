@@ -6,12 +6,12 @@ import { CREATE_TABLES, TABLE_NAMES } from "../sql/userTables"
 
 const db_name = path.join(__dirname, "../../data", "database.db")
 
-export const db = new sqlite3.Database(db_name, err => {
+export const db = new sqlite3.Database(db_name, (err) => {
 	if (err) {
 		return console.error(err.message);
 	}
 	console.log("Successful connection to the database 'database.db'");
-});
+})
 
 export default class {
 	static restartDB() {
@@ -50,7 +50,7 @@ export default class {
 	}
 
 	static run(stmt: string, params: any) {
-		console.log("DBM running", stmt, params)
+		console.log("DB-Service running", stmt, params)
 		return new Promise((res, rej) => {
 			db.run(stmt, params, (err, result) => {
 				if (err) {

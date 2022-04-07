@@ -1,0 +1,22 @@
+extends layout
+
+block head
+    title Register
+    style(type='text/css').
+        .col {
+            display: flex;
+            width: auto;
+            flex-direction: column !important;
+        }
+
+
+block heading
+    h1 Register
+
+block content
+    hr
+    form(method='POST' action='/register')
+        div
+            label Username:
+            input(type='text' name='username' id='inputUsername' placeholder="username")
+        div
